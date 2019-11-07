@@ -8,9 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Harjoitus 9 (kanta ja linkkejä) </title>
+    <title>Code Archive </title>
     <!-- Luodaan yhteys henkilö -luokkaan -->
-    <?php include("linkkikanta.php"); ?>
+    <?php include("codeObject.php"); ?>
     <link href="footer/footer.css" rel="stylesheet">
   </head>
   <body>
@@ -22,51 +22,49 @@
     // Referenssi Henkilo-oloioon
     
 
-    //Luodaan henkilo-olio
-    // $linkki = new Linkki(1, "hfifhiheifh", "fifjei", "jeof", "fjiefj");
-    $linkki = new Linkki();
+    //Luodaan code-olio
+    // $code = new code(1, "hfifhiheifh", "fifjei", "jeof", "fjiefj");
+    $code = new Code();
    echo "Hello Hello :)";
     //Pyydetään henkilo-oliota ottamaan yhteys tietokantaan
-    $linkki->luoYhteysTietokantaan();
+    $code->createConnetionToDatabase();
     
     //pyydetään henkilo-oliota hakemaan kaikki henkilot tietokannasta
-    $linkit = $linkki->haeKaikkiLinkit();
+    $codes = $code->getAllCodes();
   
-    // $ekaLinkki = new Linkki("1","http://www.mysql.com", "MySQL-tietokannan kotisivu",
+    // $ekacode = new code("1","http://www.mysql.com", "MySQL-tietokannan kotisivu",
     // "Relaatiotietokanta", "mysql");
 
-    // $ekaLinkki->tulostaTiedot();   
+    // $ekacode->tulostaTiedot();   
 ?>
 
     
 
-<h1>Kaikki linkit</h1>
+<h1>Scripts</h1>
     <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Otsikko</th>
-      <th scope="col">Linkki</th>
-      <th scope="col">Kuvaus</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Script</th>
+      <th scope="col">Tags</th>
       <!-- <th scope="col">Avainsana</th> -->
-      <th scope="col">Toiminnot</th>
+      <th scope="col">Functions</th>
     </tr>
   </thead>
   <tbody>
     <?php
-    //tulostetaan kaikki henkilöt
-    foreach($linkit as $linkki) {
-      $id = $linkki['id'];
-      $url = $linkki['linkki'];
+    //tulostetaan kaikki koodit
+    foreach($codes as $code) {
+      //$id = $code['id'];
+      //$url = $code['code'];
       ?>
       <tr>
-        <td><?php echo $id ?></td>
-        <td><?php echo $linkki['otsikko'] ?></td>
-        <td><a href=<?php echo $url ?>><?php echo $linkki['linkki'] ?></a></td>
-        <td><?php echo $linkki['kuvaus'] ?></td>
-        <!-- <td><?php echo $linkki['avainsana'] ?></td> -->
-        <td><button muuta-id="<?php echo $id ?>" class="btn btn-primary muuta-object">Muuta</button>
-        <button poista-id="<?php echo $id ?>" class="btn btn-danger poista-object">Poista</button></td>
+        <td><?php echo $code['headline'] ?></td>
+        <td><?php echo $code['description'] ?></td>
+        <td><?php echo $code['code'] ?></td>
+        <td><?php echo $code['tags'] ?></td>
+        <td>buttons</td>
       </tr>
     <?php
     }

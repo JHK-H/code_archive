@@ -20,10 +20,10 @@ class Controller {
         $type = $init['database']['type'];
         $host = $init['database']['host'];
         $port = $init['database']['port'];
-        $database = $init['database']['database'];
+        $base = $init['database']['base'];
         $username = $init['database']['username'];
         $password = $init['database']['password'];
-        $url = "{$type}:host={$host};port={$port};dbname={$database}";
+        $url = "{$type}:host={$host};port={$port};dbname={$base}";
         
         // try-lohkoon tulee se koodi, joka voi aiheuttaa kriittisen virheen
         // ja catch-lohkoon hypätään jos tulee virhe
