@@ -19,11 +19,8 @@
     
     <?php
     //phpinfo();
-    // Referenssi Henkilo-oloioon
-    
-
     //Luodaan code-olio
-    // $code = new code(1, "hfifhiheifh", "fifjei", "jeof", "fjiefj");
+    
     $code = new Code();
     //echo "Hello Hello :)";
     //Pyydetään henkilo-oliota ottamaan yhteys tietokantaan
@@ -38,8 +35,6 @@
     // $ekacode->tulostaTiedot();   
 ?>
 
-    
-
 <h1></h1>
     <table class="table">
   <thead class="thead-dark">
@@ -48,15 +43,15 @@
       <th scope="col">Description</th>
       <th scope="col">Script</th>
       <th scope="col">Tags</th>
-      <!-- <th scope="col">Avainsana</th> -->
-      <th scope="col">Functions</th>
+      <th scope="col">Comments</th>
+      <!-- <th scope="col">Functions</th> -->
     </tr>
   </thead>
   <tbody>
     <?php
     //tulostetaan kaikki koodit
     foreach($codes as $code) {
-      //$id = $code['id'];
+      //$id = $code['code'];
       //$url = $code['code'];
       ?>
       <tr>
@@ -64,8 +59,12 @@
         <td><?php echo $code['description'] ?></td>
         <td><?php echo $code['code'] ?></td>
         <td><?php echo $code['tags'] ?></td>
-        <td><button edit-id="<?php echo $id ?>" class="btn btn-primary edit-object">Edit</button>
-        <button remove-id="<?php echo $id ?>" class="btn btn-danger remove-object">Remove</button></td>
+        <td>
+          
+        </td>
+        <!--Tämä ominaisuus on työn alla -->
+        <!-- <td><button edit-id="<?php echo $id ?>" class="btn btn-primary edit-object">Edit</button>
+        <button id="<?php echo $id ?>" class="btn btn-danger delete-object">Delete</button></td> -->
       </tr>
     <?php
     }
@@ -81,6 +80,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-    <script src="chanceAndDelete.js"></script>
+    <script src="editAndDelete.js"></script>
   </body>
 </html>
+
+
+<!-- <form action="/action_page.php">
+            <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+            <br><input type="submit">
+          </form> -->

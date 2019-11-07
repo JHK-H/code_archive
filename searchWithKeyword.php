@@ -40,10 +40,10 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th>headline</th>
-                <th>description</th>
-                <th>script</th>
-                <th>tags</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Script</th>
+                <th>Tags</th>
             </tr>
         </thead>
     <?php
