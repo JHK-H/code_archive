@@ -37,13 +37,13 @@
             return $this->connectionController->executeSearchStatement("select * from code");
         }
 
-        public function addDescription() {
+        public function addCode() {
             return $this->connectionController->executeSearchStatement("insert into code(headline, description, code, tags) values (?, ?, ?, ?)",
             array($this->headline, $this->description, $this->code, $this->tags));
         }
 
-        public function getWith($keyword) {
-            echo $keyword;
+        public function searchWithKeyword($keyword) {
+            // echo $keyword;
             return $this->connectionController->executeSearchStatement("select * FROM code 
             WHERE tags LIKE '%{$keyword}%' 
             OR code LIKE '%{$keyword}%'
