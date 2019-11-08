@@ -71,9 +71,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
   </body>
 </html>
-
-
-<!-- <form action="/action_page.php">
-            <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-            <br><input type="submit">
-          </form> -->
