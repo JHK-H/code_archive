@@ -12,41 +12,29 @@
   </head>
   <body>
     <?php include 'navbar/navbar.php';?>
-    <!-- <h1>Hello, world!</h1> -->
+    
     <form class="form-signin" action="addCodeToDb.php" method="POST">
-  <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-  <h4 class="h3 mb-3 font-weight-normal">Add script</h2>
-  <!-- <label for="inputId" class="sr-only">Id</label>
-  <input name= "id" type="text" id="id" class="form-control" placeholder="Id" required autofocus
-  > -->
+  
+        <h4 class="h3 mb-3 font-weight-normal">Add script</h2>
 
-  <label for="inputTitle" class="sr-only">Title</label>
-  <textarea name="title" rows="1" cols="80" id="inputTitle" class="form-control" placeholder="Title" required></textarea>
-  <!-- <input name="title" type="text" id="inputTitle" class="form-control" placeholder="Title" required autofocus> -->
+        <label for="inputTitle" class="sr-only">Title</label>
+        <textarea name="title" rows="1" cols="80" id="inputTitle" class="form-control" placeholder="Title" required></textarea>
 
-  <label for="inputDescription" class="sr-only">Description</label>
-  <textarea name="description" rows="3" cols="80" id="inputDescription" class="form-control" placeholder="Description" required></textarea>
-  <!-- <input name="description" type="text" id="inputDescription" class="form-control" placeholder="Description" required> -->
+        <label for="inputDescription" class="sr-only">Description</label>
+        <textarea name="description" rows="3" cols="80" id="inputDescription" class="form-control" placeholder="Description" required></textarea>
 
-  <label for="inputScript" class="sr-only">Script</label>
-  <textarea name="script" rows="5" cols="80" id="inputScript" class="form-control" placeholder="Script" required></textarea>
-  <!-- <input name="script" type="text" id="inputScript" class="form-control" placeholder="Script" required> -->
+        <label for="inputScript" class="sr-only">Script</label>
+        <textarea name="script" rows="5" cols="80" id="inputScript" class="form-control" placeholder="Script" required></textarea>
 
-  <label for="inputTags" class="sr-only">Tags</label>
-  <textarea name="tags" rows="1" cols="80" id="inputTags" class="form-control" placeholder="Tags" required></textarea>
-  <!-- <input name="tags" type="text" id="inputTags" class="form-control" placeholder="Tags" required> -->
+        <label for="inputTags" class="sr-only">Tags</label>
+        <textarea name="tags" rows="1" cols="80" id="inputTags" class="form-control" placeholder="Tags" required></textarea>
 
-  <label for="inputComments" class="sr-only">Comments</label>
-  <textarea name="comments" rows="5" cols="80" id="inputComments" class="form-control" placeholder="Comments" required></textarea>
-  <!-- <input name="comments" type="text" id="inputComments" class="form-control" placeholder="Comments" required> -->
-  <!-- <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div> -->
-  <button class="btn btn-lg btn-info btn-block" type="submit">Save</button>
-  <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p> -->
-</form>
+        <label for="inputComments" class="sr-only">Comments</label>
+        <textarea name="comments" rows="5" cols="80" id="inputComments" class="form-control" placeholder="Comments" required></textarea>
+  
+        <button class="btn btn-lg btn-info btn-block" type="submit">Save</button>
+  
+    </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

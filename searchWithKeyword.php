@@ -50,8 +50,7 @@
     <?php
     // Tulostetaan kaikki henkilöt
     foreach ($codes as $code) {
-        // $id = $code['id'];
-        ?>
+    ?>
         <tr>
             <td><?php echo $code['title'] ?></td>
             <td><?php echo $code['description'] ?></td>
@@ -60,8 +59,8 @@
             <td><?php echo $code['comments'] ?></td> 
         </tr>
         <?php
-    }
-    ?>
+            }
+        ?>
 </table>
 </body>
 </html>

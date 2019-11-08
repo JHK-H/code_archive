@@ -37,11 +37,6 @@
             array($this->title, $this->description, $this->code, $this->tags, $this->comments));
         }
 
-        // public function addComment() {
-        //     return $this->connectionController->executeSearchStatement("insert into scripts(comments) values (?)",
-        //     $this->comments);
-        // }
-
         public function searchWithKeyword($keyword) {
             return $this->connectionController->executeSearchStatement("select * FROM scripts 
             WHERE tags LIKE '%{$keyword}%' 
@@ -49,8 +44,7 @@
             OR title LIKE '%{$keyword}%'
             OR description LIKE '%{$keyword}%'");
         }
-        // ("select * from linkit where = '{$keyword}'");
-        // WHERE code LIKE '%{$keyword}%'
+        
         public function setTitle($title)
         {
                 $this->title = $title;
