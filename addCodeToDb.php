@@ -6,10 +6,11 @@ include "codeObject.php";
 $code = new Code();
 
 // Otetaan lomakkeelta tulleet tiedot muuttujiin
-$code->setHeadline($_POST['title']);
+$code->setTitle($_POST['title']);
 $code->setDescription($_POST['description']);
 $code->setCode($_POST['script']);
 $code->setTags($_POST['tags']);
+$code->setComments($_POST['comments']);
 
 // Pyydetään henkilo-oliota ottamaan yhteys tietokantaan
 $code->createConnetionToDatabase();
@@ -18,7 +19,7 @@ $addOk = $code->addCode();
 
 if ($addOk > 0) {
     echo "Adding was succestful!";
-    
+
 } else {
     echo "Adding failed!";
 }

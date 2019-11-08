@@ -15,21 +15,30 @@
     <!-- <h1>Hello, world!</h1> -->
     <form class="form-signin" action="addCodeToDb.php" method="POST">
   <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-  <h1 class="h3 mb-3 font-weight-normal">Add script</h1>
+  <h4 class="h3 mb-3 font-weight-normal">Add script</h2>
   <!-- <label for="inputId" class="sr-only">Id</label>
   <input name= "id" type="text" id="id" class="form-control" placeholder="Id" required autofocus
   > -->
+
   <label for="inputTitle" class="sr-only">Title</label>
-  <input name="title" type="text" id="inputTitle" class="form-control" placeholder="Title" required autofocus>
+  <textarea name="title" rows="1" cols="80" id="inputTitle" class="form-control" placeholder="Title" required></textarea>
+  <!-- <input name="title" type="text" id="inputTitle" class="form-control" placeholder="Title" required autofocus> -->
 
   <label for="inputDescription" class="sr-only">Description</label>
-  <input name="description" type="text" id="inputDescription" class="form-control" placeholder="Description" required>
+  <textarea name="description" rows="3" cols="80" id="inputDescription" class="form-control" placeholder="Description" required></textarea>
+  <!-- <input name="description" type="text" id="inputDescription" class="form-control" placeholder="Description" required> -->
 
   <label for="inputScript" class="sr-only">Script</label>
-  <input name="script" type="text" id="inputScript" class="form-control" placeholder="Script" required>
+  <textarea name="script" rows="5" cols="80" id="inputScript" class="form-control" placeholder="Script" required></textarea>
+  <!-- <input name="script" type="text" id="inputScript" class="form-control" placeholder="Script" required> -->
 
   <label for="inputTags" class="sr-only">Tags</label>
-  <input name="tags" type="text" id="inputTags" class="form-control" placeholder="Tags" required>
+  <textarea name="tags" rows="1" cols="80" id="inputTags" class="form-control" placeholder="Tags" required></textarea>
+  <!-- <input name="tags" type="text" id="inputTags" class="form-control" placeholder="Tags" required> -->
+
+  <label for="inputComments" class="sr-only">Comments</label>
+  <textarea name="comments" rows="5" cols="80" id="inputComments" class="form-control" placeholder="Comments" required></textarea>
+  <!-- <input name="comments" type="text" id="inputComments" class="form-control" placeholder="Comments" required> -->
   <!-- <div class="checkbox mb-3">
     <label>
       <input type="checkbox" value="remember-me"> Remember me

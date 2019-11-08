@@ -21,13 +21,13 @@
     //phpinfo();
     //Luodaan code-olio
     
-    $code = new Code();
+    $script = new Code();
     //echo "Hello Hello :)";
     //Pyydetään henkilo-oliota ottamaan yhteys tietokantaan
-    $code->createConnetionToDatabase();
+    $script->createConnetionToDatabase();
     
     //pyydetään henkilo-oliota hakemaan kaikki henkilot tietokannasta
-    $codes = $code->getAllCodes();
+    $scripts = $script->getAllCodes();
   
     // $ekacode = new code("1","http://www.mysql.com", "MySQL-tietokannan kotisivu",
     // "Relaatiotietokanta", "mysql");
@@ -39,29 +39,36 @@
     <table class="table">
   <thead class="thead-dark">
     <tr>
+      <th scope="col">Id</th>
       <th scope="col">Title</th>
       <th scope="col">Description</th>
       <th scope="col">Script</th>
       <th scope="col">Tags</th>
       <th scope="col">Comments</th>
+      <!-- <th scope="col">Add comment</th> -->
       <!-- <th scope="col">Functions</th> -->
     </tr>
   </thead>
   <tbody>
     <?php
     //tulostetaan kaikki koodit
-    foreach($codes as $code) {
-      //$id = $code['code'];
-      //$url = $code['code'];
+    foreach($scripts as $script) {
+      $id = $script['id'];
+      //$url = $script['code'];
       ?>
       <tr>
-        <td><?php echo $code['headline'] ?></td>
-        <td><?php echo $code['description'] ?></td>
-        <td><?php echo $code['code'] ?></td>
-        <td><?php echo $code['tags'] ?></td>
-        <td>
-          
-        </td>
+        <td><?php echo $script['id'] ?></td>
+        <td><?php echo $script['title'] ?></td>
+        <td><?php echo $script['description'] ?></td>
+        <td><?php echo $script['code'] ?></td>
+        <td><?php echo $script['tags'] ?></td>
+        <td><?php echo $script['comments'] ?></td>
+        <!-- <td>
+          <form id="<?php echo $id ?>" action="comment.php" method="POST">
+            <textarea name="comment" rows="3" cols="35"></textarea>
+            <br><input type="submit">
+          </form>
+        </td> -->
         <!--Tämä ominaisuus on työn alla -->
         <!-- <td><button edit-id="<?php echo $id ?>" class="btn btn-primary edit-object">Edit</button>
         <button id="<?php echo $id ?>" class="btn btn-danger delete-object">Delete</button></td> -->

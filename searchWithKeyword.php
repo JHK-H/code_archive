@@ -44,6 +44,7 @@
                 <th>Description</th>
                 <th>Script</th>
                 <th>Tags</th>
+                <th>Comments</th>
             </tr>
         </thead>
     <?php
@@ -52,10 +53,11 @@
         // $id = $code['id'];
         ?>
         <tr>
-            <td><?php echo $code['headline'] ?></td>
+            <td><?php echo $code['title'] ?></td>
             <td><?php echo $code['description'] ?></td>
             <td><?php echo $code['code'] ?></td>
-            <td><?php echo $code['tags'] ?></td> 
+            <td><?php echo $code['tags'] ?></td>
+            <td><?php echo $code['comments'] ?></td> 
         </tr>
         <?php
     }
