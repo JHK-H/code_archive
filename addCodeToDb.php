@@ -29,7 +29,7 @@ $addOk = $code->addCode();
 
 if ($addOk > 0) {
     
-    echo "<h3>Adding was succesfull!</h3>";
+    echo "<h3>Adding was successful!</h3>";
     
 } else {
     echo "<h3>Adding failed!<h3>";
