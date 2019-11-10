@@ -1,5 +1,15 @@
-<?php
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <title>Notification</title>
+  </head>
+  <body>
+
+<?php
 // Referenssi Henkilo-Olioon
 include "codeObject.php";
 // Luodaan henkilo-Olio
@@ -18,9 +28,16 @@ $code->createConnetionToDatabase();
 $addOk = $code->addCode();
 
 if ($addOk > 0) {
-    echo "Adding was succestfull!";
-
+    
+    echo "<h3>Adding was successful!</h3>";
+    
 } else {
-    echo "Adding failed!";
+    echo "<h3>Adding failed!<h3>";
 }
+
 ?>
+    <form action="index.php">
+        <button>Continue</button>
+    </form>
+  </body>
+</html>  
